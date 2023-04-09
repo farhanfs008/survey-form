@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description"><i>Thank you for taking time to help us improve the platform</i></p>
+    <form id="survey-form">
+      <div class="form-group">
+        <label for="name" id="name-label">Name<input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name" required></label>
+      </div>
+      <div class="form-group">
+        <label for="email" id="email-label">Email<input type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email" required></label>
+      </div>
+      <div class="form-group">
+        <label for="number" id="number-label">Age<input type="number" name="age" class="form-control" id="number" placeholder="Age" min="13" max="99" oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" required></label>
+      </div>
+      <div class="form-group">
+        <label>Your account
+          <select name="" id="dropdown">
+            <option value="none">select one</option>
+            <option value="premium">Premium</option>
+            <option value="free">Free</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <p>Gender</p>
+        <label>
+          <input type="radio" name="gender" id="male" value="male">Male
+        </label>
+        <label>
+          <input type="radio" name="gender" id="female" value="female">Female
+        </label>
+      </div>
+      <div class="form-group">
+        <p class="group-desc">Interesting</p>
+        <label>
+          <input type="checkbox" name="interest" id="sport" value="sport">Sport
+        </label>
+        <label>
+          <input type="checkbox" name="interest" id="music" value="music">Music
+        </label>
+        <label>
+          <input type="checkbox" name="interest" id="science" value="science">Science
+        </label>
+        <label>
+          <input type="checkbox" name="interest" id="art" value="art">Art
+        </label>
+        <label>
+          <input type="checkbox" name="interest" id="politic" value="politic">Politic
+        </label>
+        <label>
+          <input type="checkbox" name="interest" id="psychology" value="psychology">Psychology
+        </label>
+      </div>
+      <div class="form-group">
+        <p>Any comment or suggestions?</p>
+        <textarea name="comment" id="comment-textarea" cols="30" rows="12" placeholder="Enter your message ..."></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
